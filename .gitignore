@@ -10,19 +10,23 @@ venv/
 # Genetic raw data
 *.vcf
 *.vcf.gz
+*.vcf.gz.tbi
 *.bcf
 
 # PLINK datasets
 *.bed
 *.bim
-*.fam
+# *.fam
 *.pgen
 *.pvar
 *.psam
 
 # PLINK temporary files
-*.log
-*.nosex
+# *.log
+# *.nosex
+*.frq
+*.hwe
+*.lmiss
 *.tmp
 *.bak
 *.ld

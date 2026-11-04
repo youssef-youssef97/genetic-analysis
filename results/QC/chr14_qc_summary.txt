@@ -1,0 +1,71 @@
+
+============================================================
+SAMPLE MISSINGNESS
+Number of records: 2,504
+count    2504.000000
+mean        0.000164
+std         0.000049
+min         0.000099
+50%         0.000139
+90%         0.000248
+95%         0.000254
+99%         0.000264
+99.9%       0.000274
+max         0.000281
+Records with missingness > 1%: 0 (0.0000%)
+Records with missingness > 2%: 0 (0.0000%)
+Records with missingness > 5%: 0 (0.0000%)
+
+============================================================
+VARIANT MISSINGNESS
+Number of records: 2,655,067
+count    2.655067e+06
+mean     1.641441e-04
+std      6.512963e-03
+min      0.000000e+00
+50%      0.000000e+00
+90%      0.000000e+00
+95%      0.000000e+00
+99%      0.000000e+00
+99.9%    2.396000e-02
+max      9.209000e-01
+Records with missingness > 1%: 3,881 (0.1462%)
+Records with missingness > 2%: 2,871 (0.1081%)
+Records with missingness > 5%: 1,877 (0.0707%)
+
+============================================================
+MINOR ALLELE FREQUENCY
+Number of variants: 2,655,067
+count    2.655067e+06
+mean     2.476447e-02
+std      7.903628e-02
+min      0.000000e+00
+1%       1.997000e-04
+5%       1.997000e-04
+25%      1.997000e-04
+50%      3.994000e-04
+75%      3.195000e-03
+95%      1.987000e-01
+max      5.000000e-01
+Variants with MAF < 1%: 2,206,785 (83.1160%)
+Variants with MAF < 5%: 2,396,376 (90.2567%)
+
+============================================================
+HARDY-WEINBERG EQUILIBRIUM
+Number of records: 2,655,067
+
+Test categories:
+TEST
+ALL(NP)    2655067
+
+Test: ALL(NP)
+count    2.655067e+06
+mean     8.225694e-01
+std      3.679709e-01
+min      0.000000e+00
+25%      1.000000e+00
+50%      1.000000e+00
+75%      1.000000e+00
+max      1.000000e+00
+P-value < 1e-06: 103,018 (3.8801%)
+P-value < 1e-10: 60,508 (2.2790%)
