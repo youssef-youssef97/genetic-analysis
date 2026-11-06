@@ -3,14 +3,15 @@ Options in effect:
   --bfile data/raw/chr14/plink/plink
   --freq
   --hardy
+  --het
   --missing
   --out results/QC/chr14_initial
 
 Hostname: nrl
 Working directory: /home/youssef/Project/genetic-analysis
-Start time: Wed Nov  4 14:09:35 2026
+Start time: Thu Nov  5 16:37:40 2026
 
-Random number seed: 1793781575
+Random number seed: 1793876860
 515625 MB RAM detected; reserving 257812 MB for main workspace.
 2655067 variants loaded from .bim file.
 2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
@@ -28,5 +29,7 @@ to results/QC/chr14_initial.lmiss.
 results/QC/chr14_initial.hwe ... done.
 2655067 variants and 2504 people pass filters and QC.
 Note: No phenotypes present.
+--het: 2645862 variants scanned, report written to results/QC/chr14_initial.het
+.
 
-End time: Wed Nov  4 14:09:38 2026
+End time: Thu Nov  5 16:37:46 2026

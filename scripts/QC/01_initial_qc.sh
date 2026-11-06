@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 set -euo pipefail
@@ -16,6 +17,7 @@ echo "Starting initial QC for chromosome 14..."
     --missing \
     --freq \
     --hardy \
+    --het \
     --out "$OUTPUT"
 
 echo "Initial QC completed successfully."
