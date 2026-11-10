@@ -1,45 +1,85 @@
+
+# =========================
 # Python
+# =========================
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 
+# =========================
 # Jupyter
+# =========================
 .ipynb_checkpoints/
 
-# Genetic raw data
+# =========================
+# Raw genetic data
+# =========================
 *.vcf
 *.vcf.gz
 *.vcf.gz.tbi
 *.bcf
+*.bcf.csi
+*.csi
+*.tbi
 
+# =========================
 # PLINK datasets
+# =========================
 *.bed
 *.bim
-# *.fam
+*.fam
 *.pgen
 *.pvar
 *.psam
+*.pgen.zst
+*.pvar.zst
+*.psam.zst
 
-# PLINK temporary files
-# *.log
-# *.nosex
+# PLINK auxiliary and temporary files
+*.log
+*.nosex
+*.hh
 *.frq
 *.hwe
 *.lmiss
+*.imiss
+*.vmiss
+*.smiss
+*.afreq
+*.hardy
+*.het
+*.sexcheck
+*.kin0
+*.king
+*.king.id
+*.king.bin
+*.prune.in
+*.prune.out
 *.tmp
 *.bak
 *.ld
 *.ld.gz
 
-# Individual-level genetic results
+# =========================
+# Individual-level results
+# =========================
 *.eigenvec
+*.eigenval
 
+# =========================
 # Executables and archives
+# =========================
 plink
 plink.exe
+plink2
+plink2.exe
 *.zip
+*.tar
+*.tar.gz
 
+# =========================
 # System files
+# =========================
 .DS_Store
 Thumbs.db
