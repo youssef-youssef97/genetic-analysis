@@ -106,9 +106,9 @@ min        -0.109934
 99%         0.233498
 max         0.294132
 
-F OUTLIERS (MEAN +/- 3 SD)
-Mean F: 0.086296
-SD F: 0.071658
-Lower bound: -0.128678
-Upper bound: 0.301270
+HETEROZYGOSITY OUTLIERS (MEAN +/- 3 SD)
+Mean Heterozygosity: 0.196612
+SD Heterozygosity: 0.015822
+Lower bound: 0.149145
+Upper bound: 0.244078
 Number of outliers: 0

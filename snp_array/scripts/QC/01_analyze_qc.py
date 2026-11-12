@@ -179,31 +179,33 @@ summarize(
     het["F"]
 )
 
-# F outliers: Mean +/- 3 SD
 
-f_mean = het["F"].mean()
-f_std = het["F"].std()
+# Heterozygosity outliers: Mean +/- 3 SD
 
-lower = f_mean - 3 * f_std
-upper = f_mean + 3 * f_std
+het_mean = het["OBS_HET"].mean()
+het_std = het["OBS_HET"].std()
+
+lower = het_mean - 3 * het_std
+upper = het_mean + 3 * het_std
 
 outliers = het[
-    (het["F"] < lower) |
-    (het["F"] > upper)
+    (het["OBS_HET"] < lower) |
+    (het["OBS_HET"] > upper)
 ]
 
-add("\nF OUTLIERS (MEAN +/- 3 SD)")
-add(f"Mean F: {f_mean:.6f}")
-add(f"SD F: {f_std:.6f}")
+add("\nHETEROZYGOSITY OUTLIERS (MEAN +/- 3 SD)")
+add(f"Mean Heterozygosity: {het_mean:.6f}")
+add(f"SD Heterozygosity: {het_std:.6f}")
 add(f"Lower bound: {lower:.6f}")
 add(f"Upper bound: {upper:.6f}")
 add(f"Number of outliers: {len(outliers):,}")
 
 if not outliers.empty:
     add(
-        outliers[["FID", "IID", "F", "OBS_HET"]]
+        outliers[["FID", "IID", "OBS_HET", "F"]]
         .to_string(index=False)
     )
+
 
 
 # ============================================================
@@ -289,11 +291,10 @@ plt.savefig(PLOT_DIR / "03_missingness.png", dpi=300)
 plt.close()
 
 
-# ============================================================
-# PLOT 4: F VS OBSERVED HETEROZYGOSITY
-# ============================================================
 
-plt.figure(figsize=(8, 5))
+# PLOT 4: F VS OBSERVED HETEROZYGOSITY
+
+plt.figure(figsize=(10, 6))
 
 plt.scatter(
     het["OBS_HET"],
@@ -302,12 +303,23 @@ plt.scatter(
     s=15
 )
 
-plt.axhline(upper, linestyle="--", label="+3 SD")
-plt.axhline(lower, linestyle="--", label="-3 SD")
-plt.axhline(f_mean, linestyle=":", label="Mean F")
+# Heterozygosity thresholds: vertical lines
+plt.axvline(
+    upper, linestyle="--",
+    color="red", label="+3 SD Heterozygosity"
+)
+
+plt.axvline(
+    lower, linestyle="--",
+    color="red", label="-3 SD Heterozygosity"
+)
+
+plt.axvline(
+    het_mean, linestyle=":",
+    color="black", label="Mean Heterozygosity"
+)
 
 if not outliers.empty:
-
     plt.scatter(
         outliers["OBS_HET"],
         outliers["F"],
@@ -324,6 +336,7 @@ plt.tight_layout()
 
 plt.savefig(PLOT_DIR / "04_heterozygosity.png", dpi=300)
 plt.close()
+
 
 
 # ============================================================
