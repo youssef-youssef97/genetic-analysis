@@ -1,0 +1,133 @@
+
+==============================================================================
+STAGE 1: LD PRUNING
+==============================================================================
+LD-pruned SNP count: 702,439
+
+==============================================================================
+STAGE 2: AUTOSOMAL HETEROZYGOSITY
+==============================================================================
+1000 Genomes panel found: population-specific MAD was calculated.
+Population-specific outlier counts:
+POPULATION
+GWD    9
+MXL    6
+CDX    5
+MSL    5
+ESN    5
+ITU    4
+PUR    3
+PJL    3
+STU    3
+TSI    3
+ACB    2
+CEU    2
+JPT    2
+CLM    1
+PEL    1
+YRI    1
+CHB    1
+LWK    1
+ASW    1
+Samples without panel population: 0
+Samples with valid heterozygosity: 2,504
+Pooled median observed heterozygosity: 0.11130504
+Pooled MAD: 0.00834165
+Pooled robust SD: 0.01236733
+Pooled lower threshold: 0.07420305
+Pooled upper threshold: 0.14840703
+Pooled heterozygosity outliers: 0
+
+==============================================================================
+STAGE 3: DUPLICATION AND RELATEDNESS (KING)
+==============================================================================
+Total pairs in KING output: 3,133,756
+Pairs with kinship >= 0.0442: 29,422
+Relationship categories:
+RELATIONSHIP
+Third-degree     29386
+Second-degree       24
+First-degree        12
+Top 20 strongest related pairs:
+   FID1    IID1    FID2    IID2  KINSHIP  RELATIONSHIP
+HG02479 HG02479 HG02429 HG02429 0.268921  First-degree
+HG03998 HG03998 HG03873 HG03873 0.267548  First-degree
+HG03899 HG03899 HG03733 HG03733 0.261223  First-degree
+NA20321 NA20321 NA20320 NA20320 0.259783  First-degree
+HG03754 HG03754 HG03750 HG03750 0.259398  First-degree
+NA20900 NA20900 NA20882 NA20882 0.257408  First-degree
+NA20900 NA20900 NA20891 NA20891 0.256218  First-degree
+NA20362 NA20362 NA20359 NA20359 0.253097  First-degree
+NA19913 NA19913 NA19904 NA19904 0.252963  First-degree
+NA20355 NA20355 NA20334 NA20334 0.250719  First-degree
+NA20318 NA20318 NA20317 NA20317 0.250443  First-degree
+NA19334 NA19334 NA19331 NA19331 0.243516  First-degree
+NA20274 NA20274 NA19625 NA19625 0.157417 Second-degree
+NA19042 NA19042 NA19027 NA19027 0.148334 Second-degree
+NA21135 NA21135 NA21109 NA21109 0.140815 Second-degree
+HG00881 HG00881 HG00851 HG00851 0.111608 Second-degree
+HG00120 HG00120 HG00116 HG00116 0.109535 Second-degree
+HG00542 HG00542 HG00475 HG00475 0.107900 Second-degree
+HG03352 HG03352 HG03343 HG03343 0.106348 Second-degree
+HG03873 HG03873 HG03866 HG03866 0.103512 Second-degree
+
+==============================================================================
+STAGE 4: SEX CONSISTENCY (CHR X)
+==============================================================================
+Samples checked: 2,504
+Sex-check problems / ambiguous calls: 719
+Sex-check status:
+STATUS
+OK         1785
+PROBLEM     719
+Reported sex (PEDSEX):
+PEDSEX
+2    1271
+1    1233
+Inferred sex (SNPSEX):
+SNPSEX
+1      1237
+NaN     715
+2       552
+
+==============================================================================
+STAGE 5: CHROMOSOME Y SAMPLE QC
+==============================================================================
+Samples in male-only chrY fileset: 1,233
+Mean Y missingness: 0.00176042
+Median Y missingness: 0.00161181
+Samples with Y missingness > 5%: 0
+Y missingness is descriptive QC among the male-only Y fileset; it is not an independent sex-concordance test.
+
+==============================================================================
+STAGE 6: SAMPLE-LEVEL QC SUMMARY
+==============================================================================
+1. AUTOSOMAL HETEROZYGOSITY
+Samples analyzed: 2,504
+Pooled outliers: 0
+Population-specific outliers: 58
+
+2. KING RELATEDNESS
+Duplicate/MZ threshold or higher: 0
+First-degree range: 12
+Second-degree range: 24
+Third-degree range: 29,386
+
+3. SEX CONSISTENCY
+Sex-check problems / ambiguous calls: 719
+
+4. CHROMOSOME Y
+Male samples in Y fileset: 1,233
+Y missingness > 5%: 0
+
+INTERPRETATION CAUTIONS
+- Heterozygosity outliers are review flags, not proof of contamination.
+- Population-specific comparisons are preferable in this multi-ancestry dataset.
+- KING relationship categories are approximate and need population context.
+- Do not remove samples automatically based only on these flags.
+
+==============================================================================
+STAGE 7: PLOTS
+==============================================================================
+
+Pipeline completed successfully.
