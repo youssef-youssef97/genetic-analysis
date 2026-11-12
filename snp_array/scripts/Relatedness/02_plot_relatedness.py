@@ -127,31 +127,19 @@ def plot_heatmap(data, filename, title, vmin, vmax,
     print("Saved:", output)
 
 # --------------------------------------------------
-# 5. Full Kinship Heatmap - original scale
-# --------------------------------------------------
-
-plot_heatmap(
-    matrix,
-    "full_kinship_heatmap.png",
-    "Pairwise Genetic Relatedness - KING Kinship",
-    vmin=-0.05,
-    vmax=0.30
-)
-
-# --------------------------------------------------
-# 6. Full Kinship Heatmap - expanded scale
+# 5. Expanded Kinship Heatmap
 # --------------------------------------------------
 
 plot_heatmap(
     matrix,
     "full_kinship_heatmap_expanded.png",
-    "Full KING Kinship Heatmap - Expanded Scale",
+    "Full KING Kinship Heatmap",
     vmin=-0.45,
     vmax=0.30
 )
 
 # --------------------------------------------------
-# 7. Related pairs only (Kinship > 0.0442)
+# 6. Related Pairs Only Heatmap
 # --------------------------------------------------
 
 positive_matrix = matrix.copy()
@@ -168,7 +156,7 @@ plot_heatmap(
 )
 
 # --------------------------------------------------
-# 8. Read pairwise KING results
+# 7. Read pairwise KING results
 # --------------------------------------------------
 
 pairs = pd.read_csv(
@@ -177,7 +165,7 @@ pairs = pd.read_csv(
 )
 
 # --------------------------------------------------
-# 9. Kinship distribution histogram
+# 8. Kinship Distribution Histogram
 # --------------------------------------------------
 
 plt.figure(figsize=(11, 6))
@@ -207,7 +195,7 @@ plt.close()
 print("Saved:", output)
 
 # --------------------------------------------------
-# 10. Top 20 related pairs
+# 9. Top 20 Related Pairs
 # --------------------------------------------------
 
 top = pairs.nlargest(20, "KINSHIP").copy()
