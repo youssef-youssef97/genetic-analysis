@@ -261,7 +261,7 @@ plot_heatmap(
     "KING Kinship Heatmap - Related Pairs Only",
     vmin=0.0442,
     vmax=0.30,
-    cmap_name="hot",
+    cmap_name="magma",
     missing_color="#eeeeee"
 )
 
